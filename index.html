@@ -30,7 +30,7 @@
 		<p> Redes veiculares são uma evolução tecnológica nos meios de comunicação presentes nos automóveis. A proposta se baseia em transpor a barreira de comunicação existente entre diferentes veículos. Isto significa que a comunicação, hoje realizada apenas entre condutor e veículo, poderá ser realizada, agora, entre veículos. Um dos maiores desafios na adoção desse sistema é a escalabilidade. Como manter uma rede de veículos bem conexa em larga escala? Protocolos criados para utras redes sem fio não são apropriados para redes reiculares, visto que existem problemas como escalabilidade (alto número de nós) e alta mobilidade dos mesmos. </p>
 		<p> Em resposta a isto, existem as chamadas VANETs (Vehicular Ad Hoc Networks), que são redes redes em que os nós são compostos pelos próprios veículos, no que chamamos de "vehicle-to-vehicle" (V2V) e pela infraestrutura rodoviária, no que chamamos de "vehicle-to-road" (V2I). A imagem abaixo pode ilustrar o funcionamento híbrido de uma rede veicular em cena. </p>
 		<br>
-		
+
 		<img src="fig1.png" alt="Cenário Rede Veicular" height="100%" width="100%">
 		<p style="text-indent: 0; text-align: left"> Figura 1: Ilustração de uma Rede Veicular VANET (Reproduzido de [2])</p>
 		<br>
@@ -76,14 +76,39 @@
 		<br>
 		<h3> Segurança </h3>
 		<br>
+		<p> Para  </p>
 		<p> O problema de segurança na WAVE se dá pela natureza insegura da comunicação sem fio. Além disso, têm-se que os veículos pessoais serão equipados com dispositivos que utilizam dispositivos portáteis, dos quais seus donos esperam privacidade. Então, o propósito de se tratar da segurança dentro da arquitetura WAVE é tentar não deixar vazar informações pessoais ou confidenciais do usuário. </p>
-		<p> A arquitetura WAVE suporta dois tipos de transferência de dados: IP ou WSMP (WAVE Short Message Protocol), que é especificado pelo padrão IEEE P1609.3. </p>
+		<p> A arquitetura WAVE suporta dois tipos de transferência de dados: IPv6 ou WSMP (WAVE Short Message Protocol), que é especificado pelo padrão IEEE P1609.3. </p>
 		<p> Os serviços de segurança para a arquitetura WAVE são formados por serviços de segurança interna WAVE (WAVE Internal Security Services) e serviços de segurança de camada superior WAVE (WAVE Higher Layer Security Services). </p>
-		<p>  </p>
+		<p> Dentre os serviços de segurança interna WAVE, podemos citar  o Serviço de Segurança de Dados (Secure Data Service), que transforma protocolos de dados de unidade (protocol data units) desprotegidos, em protocolos de dados de unidade protegidos (secured protocol data uinits). Além disso, pode-se citar também a administração de segurança (security management), que administra informações sobre certificados. </p>
+    	<p> Já nos serviços de segurança de camada superior WAVE, temos o P2PCD (Peer-to-peer certificate distribution), que habilita a distribuição de certificados peer-to-peer. </p>
+    	<p>  </p>
 		<br>
 		<br>
 		<br>
-
+		<h3> Serviços da rede </h3>
+		<br>
+		<p> O sistema WAVE é baseado em sistemas de radiocomunicações, e oferece serviços de comunicação entre veículos e estrada, veículos e outros veículos, e talvez com outros dispositivos WAVE. Os serviços de rede oferecem serviços de gerenciamento e serviços de entrega de dados entre dispositivos.  </p>
+		<p> O serviços de redes representam as camadas 3 e 4 da pilha de comunicação do open system interconnect (OSI). </p>
+		<p> Os protocolos de comunicação utilizados são o protocolo genérico de Internet versão 6 (IPv6) e o protocolo de serviço de mensagens curtas (WSMP). Também é importante ressaltar que um determinado dispositivo pode não suportar ambos os protocolos. </p>
+		<p> O sistema WAVE fornece uma pilha de protocolo de comunicação otimizada para ambiente veicular, apresentando tanto elementos customizados quanto de propóstio geral, conforme ilustrado na figura 4. O escopo dos serviços da rede é dado pelo envoltório tracejado. </p>
+		<br>
+		<img src="fig4.png" alt="Pilha WAVE" height="50%" width="50%">
+		<p style="text-indent: 0; text-align: left"> Figura 4: Pilha do protocolo WAVE (Reproduzido de [8])</p>
+		<br>
+		<p> Os serviços de dados podem ser resumidos em: </p>
+		<p style="text-indent:0"> - Controle de Enlace Lógico (LLC), que é uma subcamada que comporta o tráfego tanto do IP quanto do WSMP </p>
+		<p style="text-indent:0"> - Internet Protocol version 6 (IPv6), que utiliza como camada de transporte UDP e TCP </p>
+		<p style="text-indent:0"> - WAVE Short Message Protocol (WSMP), que troca dados de WAVE Short Messages (WSM) com as camadas mais altas. </p>
+		<p> Os serviços de gestão podem ser resumidos em: </p>
+		<p style="text-indent:0"> - </p>
+		<p style="text-indent:0"> - </p>
+		<p style="text-indent:0"> - </p>
+		<p style="text-indent:0"> - </p>
+		<p style="text-indent:0"> - </p>
+		<br>
+		<br>
+		<br>
 
 		<h1 id="aplic"> Aplicações </h1>
 		<br>
@@ -107,6 +132,8 @@
 			<li> [6] BOOYSEN, M. J.; GILMORE, J. S.; ZEADALLY, S.; ROOYEN, G.-J.van. Machine-to-Machine (M2M) Communications in Vehicular Networks. Em KSII Transactions on Internet and Information Systems. Department of Computer Science and Information Technology, University of the District of Columbia, Washington, DC, 2008.</li>
 			<br>
 			<li> [7] MORGAN, Y. L.. Managing DSRC and WAVE Standards Operations in a V2V Scenario. Em International Journal of Vehicular Technology. Article ID 797405, 2010.</li>
+			<br>
+			<li> [8] IEEE Std 1609.3-2010. IEEE Standard for Wireless Access in Vehicular Environments (WAVE)—Networking Services </li>
 		</ul>
 		<br>
 		<br>
