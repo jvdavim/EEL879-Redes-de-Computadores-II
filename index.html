@@ -76,7 +76,7 @@
 		<br>
 		<h3> Segurança </h3>
 		<br>
-		<p> Para  </p>
+		<p> Para dar início a esta abordagem, é necessário saber sobre qual segurança está sendo tratada. Em Redes Veiculares, podemos nos referir à segurança do tráfego de dados da rede, assim como à segurança do motorista do veículo. Mesmo sabendo que existe uma relação direta entre as duas abordagens, esta seção se destinará a tratar do primeiro tipo de segurança, ou seja, da segurança relacionada ao tráfego de dados na rede. </p>
 		<p> O problema de segurança na WAVE se dá pela natureza insegura da comunicação sem fio. Além disso, têm-se que os veículos pessoais serão equipados com dispositivos que utilizam dispositivos portáteis, dos quais seus donos esperam privacidade. Então, o propósito de se tratar da segurança dentro da arquitetura WAVE é tentar não deixar vazar informações pessoais ou confidenciais do usuário. </p>
 		<p> A arquitetura WAVE suporta dois tipos de transferência de dados: IPv6 ou WSMP (WAVE Short Message Protocol), que é especificado pelo padrão IEEE P1609.3. </p>
 		<p> Os serviços de segurança para a arquitetura WAVE são formados por serviços de segurança interna WAVE (WAVE Internal Security Services) e serviços de segurança de camada superior WAVE (WAVE Higher Layer Security Services). </p>
@@ -100,23 +100,31 @@
 		<p style="text-indent:0"> - Controle de Enlace Lógico (LLC), que é uma subcamada que comporta o tráfego tanto do IP quanto do WSMP </p>
 		<p style="text-indent:0"> - Internet Protocol version 6 (IPv6), que utiliza como camada de transporte UDP e TCP </p>
 		<p style="text-indent:0"> - WAVE Short Message Protocol (WSMP), que troca dados de WAVE Short Messages (WSM) com as camadas mais altas. </p>
-		<p> Os serviços de gestão podem ser resumidos em: </p>
-		<p style="text-indent:0"> - </p>
-		<p style="text-indent:0"> - </p>
-		<p style="text-indent:0"> - </p>
-		<p style="text-indent:0"> - </p>
-		<p style="text-indent:0"> - </p>
+		<p> Os serviços de gestão (WME) podem ser resumidos em: </p>
+		<p style="text-indent:0"> - Pedidos de serviço e atribuição de acesso ao canal, onde o WME processa solicitações de serviço das camadas superiores e fornece acesso ao canal. </p>
+		<p style="text-indent:0"> - Gerenciamento de entrega de dados, onde o WME aceita dados de gerenciamento recebidos pelo ar, e processa ou passa para um
+		entidade de gerenciamento designada. </p>
+		<p style="text-indent:0"> - Serviço de monitoramento de anúncios WAVE, que monitora e verifica serviços anunciados por outros dispositivos WAVE para serem disponibilizados para as camadas mais altas.</p>
+		<p style="text-indent:0"> - Congfiguração IPv6, que configura a pilha do protocolo de IP local utilizando dandos recebidos de outros dispositivos WAVE. </p>
+		<p style="text-indent:0"> - Manutenção da base de informações de gerenciamento (MIB), onde são mantidas informações de status e configuração. </p>
 		<br>
 		<br>
 		<br>
+		<h3 > WAVE Short Message </h3>
+		<br>
+		<p> WSM (WAVE Short Message) é um serviço de rede alternativo ao IPv6 com UDP/TCP (ilustrado na figura 4), que busca maior eficiência no ambiente WAVE e é regularizado pelo protocolo WSMP (WAVE Short Message Protocol). Neste tópico será brevemente abordado como ocorre a transmissão e recepcção de WSM. </p>
+		<p> No recebimento de um pedido de WSM-WaveShortMessage.request da camada superior, o protocolo WSMP calcula o tamanho do cabeçalho do WSMP e verifica se o tamanho do cabeçalho em conjunto com os dados(WSMData) é menor que o parâmetro WsmMaxLenght, que fica armazenado no MIB (Management Information Base). </p>
 
+		<br>
+		<br>
+		<br>
 		<h1 id="aplic"> Aplicações </h1>
 		<br>
 		<br>
 		<br>
 
 
-		<h1 id="bib"> Referências Bibliográficas </h1>
+		<h1 id="bib" class="bib"> Referências Bibliográficas </h1>
 		<br>
 		<ul>
 			<li> [1] BECHLER, M.; JAAP, S.; WOLF, L. An optimized TCP for inter-net access of vehicular ad hoc networks. Em Networking 2005. Springer Berlin / Heidelberg, v. 3462 de Lecture Notes in Computer Science, p. 869–880, 2005.</li>
@@ -133,7 +141,7 @@
 			<br>
 			<li> [7] MORGAN, Y. L.. Managing DSRC and WAVE Standards Operations in a V2V Scenario. Em International Journal of Vehicular Technology. Article ID 797405, 2010.</li>
 			<br>
-			<li> [8] IEEE Std 1609.3-2010. IEEE Standard for Wireless Access in Vehicular Environments (WAVE)—Networking Services </li>
+			<li> [8] IEEE Std 1609.3-2010. IEEE Standard for Wireless Access in Vehicular Environments (WAVE)—Networking Services. </li>
 		</ul>
 		<br>
 		<br>

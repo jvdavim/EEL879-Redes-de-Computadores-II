@@ -65,10 +65,20 @@ header h1 a{
 	top: 80px;
 	margin-left: 20%;
 	margin-right: 20%;
+	font-family: "Arial", Times, Sans-serif;
+	font-size: 20px;
 }
 
 .content p {
 	text-indent: 4em;
+	font-size: 18px;
 }
 
 /* ----------------- */
+
+/* -----Bibliografia----- */
+section ul li {
+	font-size: 18px;
+}
+
+/* ---------------------- */
