@@ -114,12 +114,18 @@
 		<h3 > WAVE Short Message </h3>
 		<br>
 		<p> WSM (WAVE Short Message) é um serviço de rede alternativo ao IPv6 com UDP/TCP (ilustrado na figura 4), que busca maior eficiência no ambiente WAVE e é regularizado pelo protocolo WSMP (WAVE Short Message Protocol). Neste tópico será brevemente abordado como ocorre a transmissão e recepcção de WSM. </p>
-		<p> No recebimento de um pedido de WSM-WaveShortMessage.request da camada superior, o protocolo WSMP calcula o tamanho do cabeçalho do WSMP e verifica se o tamanho do cabeçalho em conjunto com os dados(WSMData) é menor que o parâmetro WsmMaxLenght, que fica armazenado no MIB (Management Information Base). </p>
+		<p> Transmissão - No recebimento de um pedido de WSM-WaveShortMessage.request da camada superior, o protocolo WSMP calcula o tamanho do cabeçalho do WSMP e verifica se o tamanho do cabeçalho em conjunto com os dados(WSMData) é menor que o parâmetro WsmMaxLenght, que fica armazenado no MIB (Management Information Base). Após ser verificado o tamanho, o WSMP gera um cabeçalho com um formato específico para ser incluso em um LLC DL-UNITDATAX.request.  </p>
+		<p> Recepção - Na recepção do DL-UNITDATA.indication da camada LLC com o WAVE Element ID no cabeçalho do WSMP indicando WAVE Short Message, o WSMP deve passar a informação recebida para uma entidade de camada superior, com o destino especificado no cabeçalho em ProviderServiceIdentifier e o MIB WsmServiceRequestTable. </p>
 
 		<br>
 		<br>
 		<br>
 		<h1 id="aplic"> Aplicações </h1>
+		<br>
+		<p> As aplicações de redes veiculares são diversas, mas servem, principalmente, 3 objetivos: Segurança, entretenimento e assistência. </p>
+		<p> Um dos principais incentivos no desenvolvimento de redes veiculares se dá à expectativa de aumentar a segurança das pessoas no trânsito. As aplicações podem servir tanto para diminuir o número como também a gravidade dos acidentes de trânsito através de troca de mensagens rápidas entre veículos. Uma forma de aplicar essa funcionalidade, pode-se destacar 2 paradigmas simples de utilização da rede. Podem ser feitas trocas de mensagens síncronas e periódicas entre veículos com informações do tipo velocidade, posição e direção. Além disso, podem ser feitas trocas assíncronas, disparadas por algum mecanismo de emergência. </p>
+		<p> Com relação ao entretenimento podem existir infinitas aplicações. Dentre as principais, podem se destacar os serviços de troca de mensagens, arquivos, filmes músicas, entre outros. Esse compartilhamente de dados pode ser feito através da arquitetura par-a-par, que , em redes veiculares, pode ser chamada carro-a-carro (C2C). Além disso, diversos projetos podem ser desenvolvidos com este objetivo, como o Drive-thru Internet [Ott e Kutscher 2004] desenvolvido pela Universidade de Tecnologia de Helsinki cujo objetivo é prover acesso à Internet a usuários em veículos que trafegam em estradas a velocidades que podem atingir 200 km/h. </p>
+		<p>  </p>
 		<br>
 		<br>
 		<br>
