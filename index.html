@@ -18,6 +18,7 @@
 				<li><a href="#wave">WAVE</a></li>
 				<li><a href="#arq">Arquitetura</a></li>
 				<li><a href="#aplic">Aplicações</a></li>
+				<li><a href="#perg">Perguntas</a></li>
 				<li><a href="#bib">Bibliografia</a></li>
 			</ul>
 		</nav>
@@ -83,10 +84,10 @@
     	<p> Já nos serviços de segurança de camada superior WAVE, temos o P2PCD (Peer-to-peer certificate distribution), que habilita a distribuição de certificados peer-to-peer. </p>
     	<img src="fig3.png" alt="Pilha Segurança" height="50%" width="50%">
 		<p style="text-indent: 0; text-align: left"> Figura 3: Pilha do protocolo WAVE com detalhes dos serviços de segurança (Reproduzido de [9]) </p>
-    	<p> O padrão IEEE P1609.2  </p>
 		<br>
 		<br>
 		<br>
+
 		<h3> Serviços da rede </h3>
 		<br>
 		<p> O sistema WAVE é baseado em sistemas de radiocomunicações, e oferece serviços de comunicação entre veículos e estrada, veículos e outros veículos, e talvez com outros dispositivos WAVE. Os serviços de rede oferecem serviços de gerenciamento e serviços de entrega de dados entre dispositivos.  </p>
@@ -111,25 +112,40 @@
 		<br>
 		<br>
 		<br>
+
 		<h3 > WAVE Short Message </h3>
 		<br>
 		<p> WSM (WAVE Short Message) é um serviço de rede alternativo ao IPv6 com UDP/TCP (ilustrado na figura 4), que busca maior eficiência no ambiente WAVE e é regularizado pelo protocolo WSMP (WAVE Short Message Protocol). Neste tópico será brevemente abordado como ocorre a transmissão e recepcção de WSM. </p>
 		<p> Transmissão - No recebimento de um pedido de WSM-WaveShortMessage.request da camada superior, o protocolo WSMP calcula o tamanho do cabeçalho do WSMP e verifica se o tamanho do cabeçalho em conjunto com os dados(WSMData) é menor que o parâmetro WsmMaxLenght, que fica armazenado no MIB (Management Information Base). Após ser verificado o tamanho, o WSMP gera um cabeçalho com um formato específico para ser incluso em um LLC DL-UNITDATAX.request.  </p>
 		<p> Recepção - Na recepção do DL-UNITDATA.indication da camada LLC com o WAVE Element ID no cabeçalho do WSMP indicando WAVE Short Message, o WSMP deve passar a informação recebida para uma entidade de camada superior, com o destino especificado no cabeçalho em ProviderServiceIdentifier e o MIB WsmServiceRequestTable. </p>
+		<br>
+		<br>
+		<br>
 
-		<br>
-		<br>
-		<br>
 		<h1 id="aplic"> Aplicações </h1>
 		<br>
 		<p> As aplicações de redes veiculares são diversas, mas servem, principalmente, 3 objetivos: Segurança, entretenimento e assistência. </p>
 		<p> Um dos principais incentivos no desenvolvimento de redes veiculares se dá à expectativa de aumentar a segurança das pessoas no trânsito. As aplicações podem servir tanto para diminuir o número como também a gravidade dos acidentes de trânsito através de troca de mensagens rápidas entre veículos. Uma forma de aplicar essa funcionalidade, pode-se destacar 2 paradigmas simples de utilização da rede. Podem ser feitas trocas de mensagens síncronas e periódicas entre veículos com informações do tipo velocidade, posição e direção. Além disso, podem ser feitas trocas assíncronas, disparadas por algum mecanismo de emergência. </p>
 		<p> Com relação ao entretenimento podem existir infinitas aplicações. Dentre as principais, podem se destacar os serviços de troca de mensagens, arquivos, filmes músicas, entre outros. Esse compartilhamente de dados pode ser feito através da arquitetura par-a-par, que , em redes veiculares, pode ser chamada carro-a-carro (C2C). Além disso, diversos projetos podem ser desenvolvidos com este objetivo, como o Drive-thru Internet [Ott e Kutscher 2004] desenvolvido pela Universidade de Tecnologia de Helsinki cujo objetivo é prover acesso à Internet a usuários em veículos que trafegam em estradas a velocidades que podem atingir 200 km/h. </p>
-		<p>  </p>
+		<p> A assistência fornecida ao motorista é uma aplicação de grande relevância no contexto de redes veiculares. Esta facilidade é porporcionada através da disponibilização de informações úteis ao condutor, que podem ser adquiridas de serviços oferecidos ao condutor ou procedimentos de busca. Podemos destacar alguns exemplos de informações úteis como: </p>
+		<p> Aviso de estacionamentos - Informações relacionadas à rotatividade do estacionamento, localização e lotação. </p>
+		<p> Disseminação de informações de vias - Alertas de acidentes, disponibilidade, fluxo e aproximação de veículos de emergência. </p>
+		<p> Controle de tráfego - Um serviço que permite a escolha dos melhores percursos para cada condutor, evitando engarrafamentos. </p>
+		<p> Auxı́lio a cruzamentos - Informar de quem é a preferência e se algum veículo está se aproximando do cruzamento pela direção transversal. </p>
+		<p> Localização em mapas - Facilita a rastreabilidade dos veículos no mapa, facilitando a navegação e o rastreamento em situações específicas como acidentes. </p>
 		<br>
 		<br>
 		<br>
-
+		<h1 id="perg"> Perguntas </h1>
+		<br>
+		<p> 1. Explique duas formas de aplicação de Redes Veiculares WAVE na segurança dos motoristas e passageiros. </p>
+		<p> 2. Qual é a diferença entre o modo infraestruturado e o modo V2V (vehicle-to-vehicle), e como seria uma melhor opção de implementação? </p>
+		<p> 3. Qual é o objetivo de se ter um protocolo de troca de mensagens (WSMP) específico para Redes Veiculares? </p>
+		<p> 4. Qual é a principal função da base de informações de gerenciamento (MIB - Management Information Base)? </p>
+		<p> 5. Quais são os dois diferentes paradigmas de segurança para Redes Veiculares? </p>
+		<br>
+		<br>
+		<br>
 
 		<h1 id="bib" class="bib"> Referências Bibliográficas </h1>
 		<br>
@@ -155,7 +171,6 @@
 		<br>
 		<br>
 		<br>
-
 
 		<hr>
 		<br>
